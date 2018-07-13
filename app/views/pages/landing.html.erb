@@ -1,0 +1,16 @@
+
+
+<table class="table table-hover">
+  <tbody>
+    <% @students.each do |student| %>
+      <tr class="table-active">
+        <td><%= student.name %></td>
+        <td><%= student.age %></td>
+        <td><%= student.email %></td>
+        <td><%= link_to 'Show', student, class:"btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
